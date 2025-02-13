@@ -37,12 +37,12 @@ in poetry2nix.mkPoetryApplication rec {
   overrides = poetry2nix.overrides.withDefaults (final: prev: {
     cryptography = prev.cryptography.overridePythonAttrs (old: {
       buildInputs = (old.buildInputs or []) ++ [ 
-        pkgs.openssl 
-        pkgs.pkg-config
+        openssl 
+        pkg-config
       ];
       nativeBuildInputs = (old.nativeBuildInputs or []) ++ [
-        pkgs.rustc
-        pkgs.cargo
+        rustc
+        cargo
       ];
       CRYPTOGRAPHY_DONT_BUILD_RUST = "0";
     });
