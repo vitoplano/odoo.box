@@ -4,7 +4,7 @@
 {
   system,
   lib, stdenv, fetchzip, fetchFromGitHub,
-  poetry2nix, python39,
+  poetry2nix, python311,
   rtlcss, wkhtmltopdf, wkhtmltopdf-bin
 }:
 let
@@ -19,23 +19,20 @@ let
       inherit fetchFromGitHub wkhtmltopdf;
     };                                                         # (1)
 in poetry2nix.mkPoetryApplication rec {
-  pname = "odoo14";
-  series = "14.0";
-  version = "${series}.20231205";
+  pname = "odoo16";
+  series = "16.0";
+  version = "${series}.20221012";
 
   src = fetchzip {
     url = "https://nightly.odoo.com/${series}/nightly/src/odoo_${version}.tar.gz";
     name = "${pname}-${version}";
-    hash = "sha256-ZmDplN3a3Xc1s/ApWaPxP2hADJ46txFByRbsyeD7vt4=";
+    hash = "";
   };                                                           # (2)
   projectDir = src;
   pyproject = ./pyproject.toml;
   poetrylock = ./poetry.lock;
-  python = python39;
+  python = python311;
 
-  patches = [
-    ./server.py.patch                                          # (3)
-  ];
 
   doCheck = false;                                             # (4)
   dontStrip = true;                                            # (5)
