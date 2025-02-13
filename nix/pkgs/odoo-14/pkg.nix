@@ -33,6 +33,20 @@ in poetry2nix.mkPoetryApplication rec {
   poetrylock = ./poetry.lock;
   python = python311;
 
+  overrides = poetry2nix.overrides.withDefaults (final: prev: {
+    cryptography = prev.cryptography.overridePythonAttrs (old: {
+      buildInputs = (old.buildInputs or []) ++ [ 
+        pkgs.openssl 
+        pkgs.pkg-config
+      ];
+      nativeBuildInputs = (old.nativeBuildInputs or []) ++ [
+        pkgs.rustc
+        pkgs.cargo
+      ];
+      CRYPTOGRAPHY_DONT_BUILD_RUST = "0";
+    });
+  });
+
 
   doCheck = false;                                             # (4)
   dontStrip = true;                                            # (5)
