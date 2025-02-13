@@ -5,7 +5,8 @@
   system,
   lib, stdenv, fetchzip, fetchFromGitHub,
   poetry2nix, python311,
-  rtlcss, wkhtmltopdf, wkhtmltopdf-bin
+  rtlcss, wkhtmltopdf, wkhtmltopdf-bin,
+  openssl, pkg-config, cargo, rustc
 }:
 let
   isLinux = stdenv.isLinux;
