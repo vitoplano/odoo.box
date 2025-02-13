@@ -27,7 +27,7 @@ in poetry2nix.mkPoetryApplication rec {
   src = fetchzip {
     url = "https://nightly.odoo.com/${series}/nightly/src/odoo_${version}.tar.gz";
     name = "${pname}-${version}";
-    hash = "";
+    hash = "sha256-TVBYFEtCccBqdb1soXv/oydnK3nkwbKea+kAtE4h+wo=";
   };                                                           # (2)
   projectDir = src;
   pyproject = ./pyproject.toml;
