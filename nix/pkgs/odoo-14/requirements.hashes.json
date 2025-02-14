@@ -1,715 +1,478 @@
 {
-    "packages": [
-      {
-        "package": "Babel==2.9.1  # min version = 2.6.0 (Focal with security backports)",
-        "name": "Babel",
-        "version": "2.9.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/Babel-2.9.1-py2.py3-none-any.whl:",
-          "--hash=sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
-        ]
-      },
-      {
-        "package": "chardet==4.0.0",
-        "name": "chardet",
-        "version": "4.0.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/Babel-2.9.1-py2.py3-none-any.whl:",
-          "--hash=sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
-        ]
-      },
-      {
-        "package": "cryptography==3.4.8; python_version < '3.12'  # incompatibility between pyopenssl 19.0.0 and cryptography>=37.0.0",
-        "name": "cryptography",
-        "version": "3.4.8",
-        "hashes": [
-          "sha256:0f1212a66329c80d68aeeb39b8a16d54ef57071bf22ff4e521657b27372e327d",
-          "sha256:1e056c28420c072c5e3cb36e2b23ee55e260cb04eee08f702e0edfec3fb51959"
-        ]
-      },
-      {
-        "package": "cryptography==42.0.8 ; python_version >= '3.12'  # (Noble) min 41.0.7, pinning 42.0.8 for security fixes",
-        "name": "cryptography",
-        "version": "42.0.8",
-        "hashes": [
-          "sha256:72ad6b8c8a8aaa6bcd02081c33658ac6448d14204b35d9a305dca42f14904584",
-          "sha256:ce49873e56338459dedc6a8d54f1ec4f44e780b2ca56409c44f8d5788e9d3c0e"
-        ]
-      },
-      {
-        "package": "decorator==4.4.2",
-        "name": "decorator",
-        "version": "4.4.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/Babel-2.9.1-py2.py3-none-any.whl:",
-          "--hash=sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
-        ]
-      },
-      {
-        "package": "docutils==0.16",
-        "name": "docutils",
-        "version": "0.16",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/Babel-2.9.1-py2.py3-none-any.whl:",
-          "--hash=sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
-        ]
-      },
-      {
-        "package": "ebaysdk==2.1.5",
-        "name": "ebaysdk",
-        "version": "2.1.5",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/Babel-2.9.1-py2.py3-none-any.whl:",
-          "--hash=sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
-        ]
-      },
-      {
-        "package": "freezegun==0.3.11; python_version < '3.8'",
-        "name": "freezegun",
-        "version": "0.3.11",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/Babel-2.9.1-py2.py3-none-any.whl:",
-          "--hash=sha256:ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
-        ]
-      },
-      {
-        "package": "freezegun==0.3.15; python_version >= '3.8'",
-        "name": "freezegun",
-        "version": "0.3.15",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "gevent==1.5.0 ; sys_platform != 'win32' and python_version == '3.7'",
-        "name": "gevent",
-        "version": "1.5.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "gevent==20.9.0 ; sys_platform != 'win32' and python_version > '3.7' and python_version <= '3.9'",
-        "name": "gevent",
-        "version": "20.9.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "gevent==21.8.0 ; sys_platform != 'win32' and python_version > '3.9' and python_version <= '3.10'  # (Jammy)",
-        "name": "gevent",
-        "version": "21.8.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "gevent==22.10.2; sys_platform != 'win32' and python_version > '3.10'and python_version < '3.12' # (Jammy)",
-        "name": "gevent",
-        "version": "22.10.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "gevent==24.2.1 ; sys_platform != 'win32' and python_version >= '3.12'  # (Noble)",
-        "name": "gevent",
-        "version": "24.2.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "greenlet==0.4.15 ; sys_platform != 'win32' and python_version == '3.7'",
-        "name": "greenlet",
-        "version": "0.4.15",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/freezegun-0.3.15-py2.py3-none-any.whl:",
-          "--hash=sha256:82c757a05b7c7ca3e176bfebd7d6779fd9139c7cb4ef969c38a28d74deef89b2"
-        ]
-      },
-      {
-        "package": "greenlet==0.4.17 ; sys_platform != 'win32' and python_version > '3.7' and python_version <= '3.9'",
-        "name": "greenlet",
-        "version": "0.4.17",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "greenlet==1.1.2 ; sys_platform != 'win32' and python_version  > '3.9' and python_version <= '3.10'  # (Jammy)",
-        "name": "greenlet",
-        "version": "1.1.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "greenlet==2.0.2 ; sys_platform != 'win32' and python_version > '3.10' and python_version < '3.12' # (Jammy)",
-        "name": "greenlet",
-        "version": "2.0.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "greenlet==3.0.3 ; sys_platform != 'win32' and python_version >= '3.12'  # (Noble)",
-        "name": "greenlet",
-        "version": "3.0.3",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "idna==2.10",
-        "name": "idna",
-        "version": "2.10",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "Jinja2==2.11.3 ; python_version <= '3.10'  # min version = 2.10.1 (Focal - with security backports)",
-        "name": "Jinja2",
-        "version": "2.11.3",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "Jinja2==3.1.2 ; python_version > '3.10'",
-        "name": "Jinja2",
-        "version": "3.1.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "libsass==0.20.1 ; python_version < '3.12'",
-        "name": "libsass",
-        "version": "0.20.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "libsass==0.22.0 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
-        "name": "libsass",
-        "version": "0.22.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "lxml==4.6.5 ; python_version <= '3.10'  # min version = 4.5.0 (Focal - with security backports)",
-        "name": "lxml",
-        "version": "4.6.5",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "lxml==4.9.3 ; python_version > '3.10' and python_version < '3.12' # min 4.9.2, pinning 4.9.3 because of missing wheels for darwin in 4.9.3",
-        "name": "lxml",
-        "version": "4.9.3",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "lxml==5.2.1; python_version >= '3.12' # (Noble - removed html clean)",
-        "name": "lxml",
-        "version": "5.2.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "lxml-html-clean; python_version >= '3.12' # (Noble - removed from lxml, unpinned for futur security patches)",
-        "name": "lxml-html-clean",
-        "version": null,
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "MarkupSafe==1.1.1 ; python_version <= '3.10'",
-        "name": "MarkupSafe",
-        "version": "1.1.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "MarkupSafe==2.1.2 ; python_version > '3.10' and python_version < '3.12'",
-        "name": "MarkupSafe",
-        "version": "2.1.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "MarkupSafe==2.1.5 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
-        "name": "MarkupSafe",
-        "version": "2.1.5",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "num2words==0.5.9",
-        "name": "num2words",
-        "version": "0.5.9",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "ofxparse==0.19; python_version <= '3.9'",
-        "name": "ofxparse",
-        "version": "0.19",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "ofxparse==0.21; python_version > '3.9'  # (Jammy)",
-        "name": "ofxparse",
-        "version": "0.21",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "passlib==1.7.4 # min version = 1.7.2 (Focal with security backports)",
-        "name": "passlib",
-        "version": "1.7.4",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "Pillow==9.0.1 ; python_version <= '3.10'  # min version = 7.0.0 (Focal with security backports)",
-        "name": "Pillow",
-        "version": "9.0.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "Pillow==9.4.0 ; python_version > '3.10' and python_version < '3.12'",
-        "name": "Pillow",
-        "version": "9.4.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "Pillow==10.2.0 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
-        "name": "Pillow",
-        "version": "10.2.0",
-        "hashes": [
-          "sha256:02f23c1e8840ca0d5e080e170b99c8c91b6337a5fdb72be3ea9334533e847781",
-          "sha256:1a07fb04c4727d91069284e6f6d2a846b530b5519e66f5c8a59e1e98c8bd67ae"
-        ]
-      },
-      {
-        "package": "polib==1.1.0",
-        "name": "polib",
-        "version": "1.1.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "psutil==5.8.0 ; python_version <= '3.10'",
-        "name": "psutil",
-        "version": "5.8.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "psutil==5.9.4 ; python_version > '3.10' and python_version < '3.12'",
-        "name": "psutil",
-        "version": "5.9.4",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "psutil==5.9.8 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
-        "name": "psutil",
-        "version": "5.9.8",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/greenlet-0.4.17.tar.gz:",
-          "--hash=sha256:41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
-        ]
-      },
-      {
-        "package": "psycopg2==2.7.7 ; sys_platform != 'win32' and python_version < '3.8'",
-        "name": "psycopg2",
-        "version": "2.7.7",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "psycopg2==2.8.6 ; sys_platform != 'win32' and python_version >= '3.8' and python_version < '3.10'",
-        "name": "psycopg2",
-        "version": "2.8.6",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "psycopg2==2.8.6 ; sys_platform == 'win32' and python_version < '3.10' #",
-        "name": "psycopg2",
-        "version": "2.8.6",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "psycopg2==2.9.2 ; python_version == '3.10'",
-        "name": "psycopg2",
-        "version": "2.9.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "psycopg2==2.9.5 ; python_version >= '3.11' and python_version < '3.12'",
-        "name": "psycopg2",
-        "version": "2.9.5",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "psycopg2==2.9.9 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
-        "name": "psycopg2",
-        "version": "2.9.9",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pydot==1.4.2",
-        "name": "pydot",
-        "version": "1.4.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pyopenssl==20.0.1; python_version < '3.12'",
-        "name": "pyopenssl",
-        "version": "20.0.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pyopenssl==24.1.0 ; python_version >= '3.12' # (Noble) min 23.2.0, pinned for compatibility with cryptography==42.0.8 and security patches",
-        "name": "pyopenssl",
-        "version": "24.1.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "PyPDF2==1.26.0 ; python_version <= '3.10'",
-        "name": "PyPDF2",
-        "version": "1.26.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "PyPDF2==2.12.1 ; python_version > '3.10'",
-        "name": "PyPDF2",
-        "version": "2.12.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pypiwin32 ; sys_platform == 'win32'",
-        "name": "pypiwin32",
-        "version": null,
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pyserial==3.5",
-        "name": "pyserial",
-        "version": "3.5",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "python-dateutil==2.8.1",
-        "name": "python-dateutil",
-        "version": "2.8.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "python-ldap==3.4.0 ; sys_platform != 'win32' and python_version < '3.12' # min version = 3.2.0 (Focal with security backports)",
-        "name": "python-ldap",
-        "version": "3.4.0",
-        "hashes": [
-          "sha256:57f2e7575117f55c8323900f6265d2154c5d3e23346e5a303723f37d75a14056",
-          "sha256:71b589cd7be07b8ef59ef6fdec702dd75c95a0c5800c1ecc7eaad54ea558d5a2"
-        ]
-      },
-      {
-        "package": "python-ldap==3.4.4 ; sys_platform != 'win32' and python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
-        "name": "python-ldap",
-        "version": "3.4.4",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "python-stdnum==1.16",
-        "name": "python-stdnum",
-        "version": "1.16",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pytz  # no version pinning to avoid OS perturbations",
-        "name": "pytz",
-        "version": null,
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pyusb==1.0.2 ; python_version <= '3.10'",
-        "name": "pyusb",
-        "version": "1.0.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "pyusb==1.2.1 ; python_version > '3.10'",
-        "name": "pyusb",
-        "version": "1.2.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "qrcode==6.1",
-        "name": "qrcode",
-        "version": "6.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "reportlab==3.5.59 ; python_version <= '3.10'  # version < 3.5.54 are not compatible with Pillow 8.1.2 and 3.5.59 is bullseye",
-        "name": "reportlab",
-        "version": "3.5.59",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "reportlab==3.6.12 ; python_version > '3.10' and python_version < '3.12'",
-        "name": "reportlab",
-        "version": "3.6.12",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "reportlab==4.1.0 ; python_version >= '3.12' # (Noble) Mostly to have a wheel package",
-        "name": "reportlab",
-        "version": "4.1.0",
-        "hashes": [
-          "sha256:32675c572d1d83f18c284da78ea5f4af17f6c7d2d4410e65e5455ad51d4fb57f",
-          "sha256:797ba7d5f5eec0a04c249fe3dd16e3bf7a296d927cec97f7d6178758ac7fc8d1"
-        ]
-      },
-      {
-        "package": "requests==2.25.1 ;  python_version < '3.12' # versions < 2.25 aren't compatible w/ urllib3 1.26. Bullseye = 2.25.1. min version = 2.22.0 (Focal)",
-        "name": "requests",
-        "version": "2.25.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "requests==2.31.0 ; python_version >= '3.12' # (Noble) Compatibility with i",
-        "name": "requests",
-        "version": "2.31.0",
-        "hashes": [
-          "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
-          "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"
-        ]
-      },
-      {
-        "package": "rl-renderPM==4.0.3 ; sys_platform == 'win32' and python_version >= '3.12'  # Needed by reportlab 4.1.0 but included in deb package",
-        "name": "rl-renderPM",
-        "version": "4.0.3",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "urllib3==1.26.5 ; python_version < '3.12' # indirect / min version = 1.25.8 (Focal with security backports)",
-        "name": "urllib3",
-        "version": "1.26.5",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "urllib3==2.0.7  ; python_version >= '3.12'  # (Noble) Compatibility with cryptography",
-        "name": "urllib3",
-        "version": "2.0.7",
-        "hashes": [
-          "sha256:c97dfde1f7bd43a71c8d2a58e369e9b2bf692d1334ea9f9cae55add7d0dd0f84",
-          "sha256:d0570876c61ab9e520d776c38acbbb5b05a776d3f9ff98a5c8fd5162a444cf19"
-        ]
-      },
-      {
-        "package": "vobject==0.9.6.1",
-        "name": "vobject",
-        "version": "0.9.6.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "Werkzeug==0.16.1 ; python_version <= '3.9'",
-        "name": "Werkzeug",
-        "version": "0.16.1",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "Werkzeug==2.0.2 ; python_version > '3.9'  # (Jammy)",
-        "name": "Werkzeug",
-        "version": "2.0.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "xlrd==1.1.0; python_version < '3.8'",
-        "name": "xlrd",
-        "version": "1.1.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "xlrd==1.2.0; python_version >= '3.8'",
-        "name": "xlrd",
-        "version": "1.2.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "XlsxWriter==1.1.2",
-        "name": "XlsxWriter",
-        "version": "1.1.2",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "xlwt==1.3.0",
-        "name": "xlwt",
-        "version": "1.3.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      },
-      {
-        "package": "zeep==4.0.0",
-        "name": "zeep",
-        "version": "4.0.0",
-        "hashes": [
-          "/tmp/tmpq0mg10d8/psycopg2-2.7.7.tar.gz:",
-          "--hash=sha256:f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
-        ]
-      }
-    ]
-  }
+  "packages": [
+    {
+      "package": "Babel==2.9.1  # min version = 2.6.0 (Focal with security backports)",
+      "name": "Babel",
+      "version": "2.9.1",
+      "hash": "sha256-ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
+    },
+    {
+      "package": "chardet==4.0.0",
+      "name": "chardet",
+      "version": "4.0.0",
+      "hash": "sha256-ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
+    },
+    {
+      "package": "cryptography==3.4.8; python_version < '3.12'  # incompatibility between pyopenssl 19.0.0 and cryptography>=37.0.0",
+      "name": "cryptography",
+      "version": "3.4.8",
+      "hash": "sha256-ab49e12b91d937cd11f0b67cb259a57ab4ad2b59ac7a3b41d6c06c0ac5b0def9"
+    },
+    {
+      "package": "cryptography==42.0.8 ; python_version >= '3.12'  # (Noble) min 41.0.7, pinning 42.0.8 for security fixes",
+      "name": "cryptography",
+      "version": "42.0.8",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "decorator==4.4.2",
+      "name": "decorator",
+      "version": "4.4.2",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "docutils==0.16",
+      "name": "docutils",
+      "version": "0.16",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "ebaysdk==2.1.5",
+      "name": "ebaysdk",
+      "version": "2.1.5",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "freezegun==0.3.11; python_version < '3.8'",
+      "name": "freezegun",
+      "version": "0.3.11",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "freezegun==0.3.15; python_version >= '3.8'",
+      "name": "freezegun",
+      "version": "0.3.15",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "gevent==1.5.0 ; sys_platform != 'win32' and python_version == '3.7'",
+      "name": "gevent",
+      "version": "1.5.0",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "gevent==20.9.0 ; sys_platform != 'win32' and python_version > '3.7' and python_version <= '3.9'",
+      "name": "gevent",
+      "version": "20.9.0",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "gevent==21.8.0 ; sys_platform != 'win32' and python_version > '3.9' and python_version <= '3.10'  # (Jammy)",
+      "name": "gevent",
+      "version": "21.8.0",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "gevent==22.10.2; sys_platform != 'win32' and python_version > '3.10'and python_version < '3.12' # (Jammy)",
+      "name": "gevent",
+      "version": "22.10.2",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "gevent==24.2.1 ; sys_platform != 'win32' and python_version >= '3.12'  # (Noble)",
+      "name": "gevent",
+      "version": "24.2.1",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "greenlet==0.4.15 ; sys_platform != 'win32' and python_version == '3.7'",
+      "name": "greenlet",
+      "version": "0.4.15",
+      "hash": "sha256-9c0c1716c8447ee7dbf08d6db2e5c41c688544c61074b54fc4564196f55c25a7"
+    },
+    {
+      "package": "greenlet==0.4.17 ; sys_platform != 'win32' and python_version > '3.7' and python_version <= '3.9'",
+      "name": "greenlet",
+      "version": "0.4.17",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "greenlet==1.1.2 ; sys_platform != 'win32' and python_version  > '3.9' and python_version <= '3.10'  # (Jammy)",
+      "name": "greenlet",
+      "version": "1.1.2",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "greenlet==2.0.2 ; sys_platform != 'win32' and python_version > '3.10' and python_version < '3.12' # (Jammy)",
+      "name": "greenlet",
+      "version": "2.0.2",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "greenlet==3.0.3 ; sys_platform != 'win32' and python_version >= '3.12'  # (Noble)",
+      "name": "greenlet",
+      "version": "3.0.3",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "idna==2.10",
+      "name": "idna",
+      "version": "2.10",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "Jinja2==2.11.3 ; python_version <= '3.10'  # min version = 2.10.1 (Focal - with security backports)",
+      "name": "Jinja2",
+      "version": "2.11.3",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "Jinja2==3.1.2 ; python_version > '3.10'",
+      "name": "Jinja2",
+      "version": "3.1.2",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "libsass==0.20.1 ; python_version < '3.12'",
+      "name": "libsass",
+      "version": "0.20.1",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "libsass==0.22.0 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
+      "name": "libsass",
+      "version": "0.22.0",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "lxml==4.6.5 ; python_version <= '3.10'  # min version = 4.5.0 (Focal - with security backports)",
+      "name": "lxml",
+      "version": "4.6.5",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "lxml==4.9.3 ; python_version > '3.10' and python_version < '3.12' # min 4.9.2, pinning 4.9.3 because of missing wheels for darwin in 4.9.3",
+      "name": "lxml",
+      "version": "4.9.3",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "lxml==5.2.1; python_version >= '3.12' # (Noble - removed html clean)",
+      "name": "lxml",
+      "version": "5.2.1",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "lxml-html-clean; python_version >= '3.12' # (Noble - removed from lxml, unpinned for futur security patches)",
+      "name": "lxml-html-clean",
+      "version": null,
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "MarkupSafe==1.1.1 ; python_version <= '3.10'",
+      "name": "MarkupSafe",
+      "version": "1.1.1",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "MarkupSafe==2.1.2 ; python_version > '3.10' and python_version < '3.12'",
+      "name": "MarkupSafe",
+      "version": "2.1.2",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "MarkupSafe==2.1.5 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
+      "name": "MarkupSafe",
+      "version": "2.1.5",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "num2words==0.5.9",
+      "name": "num2words",
+      "version": "0.5.9",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "ofxparse==0.19; python_version <= '3.9'",
+      "name": "ofxparse",
+      "version": "0.19",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "ofxparse==0.21; python_version > '3.9'  # (Jammy)",
+      "name": "ofxparse",
+      "version": "0.21",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "passlib==1.7.4 # min version = 1.7.2 (Focal with security backports)",
+      "name": "passlib",
+      "version": "1.7.4",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "Pillow==9.0.1 ; python_version <= '3.10'  # min version = 7.0.0 (Focal with security backports)",
+      "name": "Pillow",
+      "version": "9.0.1",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "Pillow==9.4.0 ; python_version > '3.10' and python_version < '3.12'",
+      "name": "Pillow",
+      "version": "9.4.0",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "Pillow==10.2.0 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
+      "name": "Pillow",
+      "version": "10.2.0",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "polib==1.1.0",
+      "name": "polib",
+      "version": "1.1.0",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "psutil==5.8.0 ; python_version <= '3.10'",
+      "name": "psutil",
+      "version": "5.8.0",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "psutil==5.9.4 ; python_version > '3.10' and python_version < '3.12'",
+      "name": "psutil",
+      "version": "5.9.4",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "psutil==5.9.8 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
+      "name": "psutil",
+      "version": "5.9.8",
+      "hash": "sha256-41d8835c69a78de718e466dd0e6bfd4b46125f21a67c3ff6d76d8d8059868d6b"
+    },
+    {
+      "package": "psycopg2==2.7.7 ; sys_platform != 'win32' and python_version < '3.8'",
+      "name": "psycopg2",
+      "version": "2.7.7",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "psycopg2==2.8.6 ; sys_platform != 'win32' and python_version >= '3.8' and python_version < '3.10'",
+      "name": "psycopg2",
+      "version": "2.8.6",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "psycopg2==2.8.6 ; sys_platform == 'win32' and python_version < '3.10' #",
+      "name": "psycopg2",
+      "version": "2.8.6",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "psycopg2==2.9.2 ; python_version == '3.10'",
+      "name": "psycopg2",
+      "version": "2.9.2",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "psycopg2==2.9.5 ; python_version >= '3.11' and python_version < '3.12'",
+      "name": "psycopg2",
+      "version": "2.9.5",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "psycopg2==2.9.9 ; python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
+      "name": "psycopg2",
+      "version": "2.9.9",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pydot==1.4.2",
+      "name": "pydot",
+      "version": "1.4.2",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pyopenssl==20.0.1; python_version < '3.12'",
+      "name": "pyopenssl",
+      "version": "20.0.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pyopenssl==24.1.0 ; python_version >= '3.12' # (Noble) min 23.2.0, pinned for compatibility with cryptography==42.0.8 and security patches",
+      "name": "pyopenssl",
+      "version": "24.1.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "PyPDF2==1.26.0 ; python_version <= '3.10'",
+      "name": "PyPDF2",
+      "version": "1.26.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "PyPDF2==2.12.1 ; python_version > '3.10'",
+      "name": "PyPDF2",
+      "version": "2.12.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pypiwin32 ; sys_platform == 'win32'",
+      "name": "pypiwin32",
+      "version": null,
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pyserial==3.5",
+      "name": "pyserial",
+      "version": "3.5",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "python-dateutil==2.8.1",
+      "name": "python-dateutil",
+      "version": "2.8.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "python-ldap==3.4.0 ; sys_platform != 'win32' and python_version < '3.12' # min version = 3.2.0 (Focal with security backports)",
+      "name": "python-ldap",
+      "version": "3.4.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "python-ldap==3.4.4 ; sys_platform != 'win32' and python_version >= '3.12'  # (Noble) Mostly to have a wheel package",
+      "name": "python-ldap",
+      "version": "3.4.4",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "python-stdnum==1.16",
+      "name": "python-stdnum",
+      "version": "1.16",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pytz  # no version pinning to avoid OS perturbations",
+      "name": "pytz",
+      "version": null,
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pyusb==1.0.2 ; python_version <= '3.10'",
+      "name": "pyusb",
+      "version": "1.0.2",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "pyusb==1.2.1 ; python_version > '3.10'",
+      "name": "pyusb",
+      "version": "1.2.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "qrcode==6.1",
+      "name": "qrcode",
+      "version": "6.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "reportlab==3.5.59 ; python_version <= '3.10'  # version < 3.5.54 are not compatible with Pillow 8.1.2 and 3.5.59 is bullseye",
+      "name": "reportlab",
+      "version": "3.5.59",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "reportlab==3.6.12 ; python_version > '3.10' and python_version < '3.12'",
+      "name": "reportlab",
+      "version": "3.6.12",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "reportlab==4.1.0 ; python_version >= '3.12' # (Noble) Mostly to have a wheel package",
+      "name": "reportlab",
+      "version": "4.1.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "requests==2.25.1 ;  python_version < '3.12' # versions < 2.25 aren't compatible w/ urllib3 1.26. Bullseye = 2.25.1. min version = 2.22.0 (Focal)",
+      "name": "requests",
+      "version": "2.25.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "requests==2.31.0 ; python_version >= '3.12' # (Noble) Compatibility with i",
+      "name": "requests",
+      "version": "2.31.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "rl-renderPM==4.0.3 ; sys_platform == 'win32' and python_version >= '3.12'  # Needed by reportlab 4.1.0 but included in deb package",
+      "name": "rl-renderPM",
+      "version": "4.0.3",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "urllib3==1.26.5 ; python_version < '3.12' # indirect / min version = 1.25.8 (Focal with security backports)",
+      "name": "urllib3",
+      "version": "1.26.5",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "urllib3==2.0.7  ; python_version >= '3.12'  # (Noble) Compatibility with cryptography",
+      "name": "urllib3",
+      "version": "2.0.7",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "vobject==0.9.6.1",
+      "name": "vobject",
+      "version": "0.9.6.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "Werkzeug==0.16.1 ; python_version <= '3.9'",
+      "name": "Werkzeug",
+      "version": "0.16.1",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "Werkzeug==2.0.2 ; python_version > '3.9'  # (Jammy)",
+      "name": "Werkzeug",
+      "version": "2.0.2",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "xlrd==1.1.0; python_version < '3.8'",
+      "name": "xlrd",
+      "version": "1.1.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "xlrd==1.2.0; python_version >= '3.8'",
+      "name": "xlrd",
+      "version": "1.2.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "XlsxWriter==1.1.2",
+      "name": "XlsxWriter",
+      "version": "1.1.2",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "xlwt==1.3.0",
+      "name": "xlwt",
+      "version": "1.3.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    },
+    {
+      "package": "zeep==4.0.0",
+      "name": "zeep",
+      "version": "4.0.0",
+      "hash": "sha256-f4526d078aedd5187d0508aa5f9a01eae6a48a470ed678406da94b4cd6524b7e"
+    }
+  ]
+}
