@@ -4,14 +4,29 @@
 {
   system,
   lib, stdenv, fetchzip, fetchFromGitHub,
-  poetry2nix, python311,
-  rtlcss, wkhtmltopdf, wkhtmltopdf-bin,
-  openssl, pkg-config, cargo, rustc
+  python3,rtlcss, wkhtmltopdf, wkhtmltopdf-bin
 }:
 let
   isLinux = stdenv.isLinux;
   ifLinux = ps: if isLinux then ps else [];
   is-x86_64 = lib.strings.hasPrefix "x86_64" system;
+
+  pythonPackages = python3.pkgs;
+  requirements = builtins.fromJSON (builtins.readFile ./requirements.hashes.json);
+
+  mkPythonPackage = packageInfo: 
+    pythonPackages.buildPythonPackage {
+      pname = packageInfo.name;
+      version = packageInfo.version;
+      src = pythonPackages.fetchPypi {
+        pname = packageInfo.name;
+        version = packageInfo.version;
+        hash = builtins.head packageInfo.hashes;
+      };
+      doCheck = false;
+    };
+
+  pythonDeps = map mkPythonPackage requirements.packages;
 
   wkhtmltopdf-odoo =
     if is-x86_64
@@ -19,7 +34,7 @@ let
     else import ./wkhtmltopdf.nix {
       inherit fetchFromGitHub wkhtmltopdf;
     };                                                         # (1)
-in poetry2nix.mkPoetryApplication rec {
+in stdenv.mkDerivation rec {
   pname = "odoo16";
   series = "16.0";
   version = "${series}.20221012";
@@ -29,35 +44,34 @@ in poetry2nix.mkPoetryApplication rec {
     name = "${pname}-${version}";
     hash = "sha256-TVBYFEtCccBqdb1soXv/oydnK3nkwbKea+kAtE4h+wo=";
   };                                                           # (2)
-  projectDir = src;
-  pyproject = ./pyproject.toml;
-  poetrylock = ./poetry.lock;
-  python = python311;
 
-  overrides = poetry2nix.overrides.withDefaults (final: prev: {
-    cryptography = prev.cryptography.overridePythonAttrs (old: {
-      buildInputs = (old.buildInputs or []) ++ [ 
-        openssl 
-        pkg-config
-      ];
-      nativeBuildInputs = (old.nativeBuildInputs or []) ++ [
-        rustc
-        cargo
-      ];
-      CRYPTOGRAPHY_DONT_BUILD_RUST = "0";
-    });
-  });
-
-
-  doCheck = false;                                             # (4)
-  dontStrip = true;                                            # (5)
-
-  makeWrapperArgs =
-  let
-    ps = [ rtlcss ] ++ ifLinux [ wkhtmltopdf-odoo ];           # (1)
-  in [
-    "--prefix" "PATH" ":" "${lib.makeBinPath ps}"
+  nativeBuildInputs = [
+    python3
   ];
+
+  patches = [
+    ./server.py.patch                                          # (3)
+  ];
+  
+  buildInputs = [
+    rtlcss
+  ] ++ ifLinux [ wkhtmltopdf-odoo ];
+
+  pythonEnv = python3.withPackages (ps: pythonDeps);
+
+  installPhase = ''
+    mkdir -p $out/{bin,share/odoo}
+    cp -r . $out/share/odoo
+    
+    # Crea lo script wrapper
+    cat > $out/bin/odoo <<EOF
+    #!${stdenv.shell}
+    PYTHONPATH=$out/share/odoo:$PYTHONPATH
+    exec ${pythonEnv}/bin/python $out/share/odoo/odoo-bin "\$@"
+    EOF
+    chmod +x $out/bin/odoo
+  '';
+
 
   meta = with lib; {
     description = "Open Source ERP and CRM";
