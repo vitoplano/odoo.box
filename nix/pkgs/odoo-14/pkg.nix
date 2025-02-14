@@ -21,7 +21,7 @@ let
       src = pythonPackages.fetchPypi {
         pname = packageInfo.name;
         version = packageInfo.version;
-        hash = builtins.head packageInfo.hashes;
+        hash = packageInfo.hash;
       };
       doCheck = false;
     };
