@@ -1,6 +1,3 @@
-#
-# See `docs.md` for package documentation.
-#
 {
   system,
   lib, stdenv, fetchzip, fetchFromGitHub, fetchPypi,
@@ -19,26 +16,28 @@ let
     version = "1.0";
     format = "setuptools";
 
-    src = ./.;  # Usa la directory corrente
+    src = ./.; 
 
     # Non eseguire i test delle dipendenze
     doCheck = false;
 
-    # Specifica le dipendenze da pip
-    propagatedBuildInputs = with pythonPackages; [
+    # Specifica le dipendenze base necessarie per il build
+    nativeBuildInputs = with pythonPackages; [
       pip
+      setuptools
+      wheel
     ];
 
-    # Installa le dipendenze da requirements.txt durante la fase di build
-    buildInputs = [ pythonPackages.pip ];
-
-    # Copia requirements.txt e installa le dipendenze
-    postInstall = ''
-      cp ${./requirements.txt} $out/requirements.txt
-      export HOME=$TMPDIR
-      cd $out
-      ${pythonPackages.pip}/bin/pip install -r requirements.txt --prefix=$out
+    # Assicurati che i file necessari siano nella directory src
+    preBuild = ''
+      cp ${./setup.py} setup.py
+      cp ${./requirements.txt} requirements.txt
     '';
+
+    # Evita errori con pacchetti che richiedono network durante l'installazione
+    SETUPTOOLS_USE_DISTUTILS = "stdlib";
+    PYTHONNOUSERSITE = "1";
+    HOME = "/tmp";
   };
 
   wkhtmltopdf-odoo =
