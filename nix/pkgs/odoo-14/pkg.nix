@@ -50,7 +50,7 @@ let
 in stdenv.mkDerivation rec {
   pname = "odoo16";
   series = "16.0";
-  version = "${series}.20240214";
+  version = "${series}.20221012";
 
   src = fetchzip {
     url = "https://nightly.odoo.com/${series}/nightly/src/odoo_${version}.tar.gz";
