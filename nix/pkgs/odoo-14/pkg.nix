@@ -3,7 +3,7 @@
 #
 {
   system,
-  lib, stdenv, fetchzip, fetchFromGitHub,
+  lib, stdenv, fetchzip, fetchFromGitHub, fetchPypi,
   python3, rtlcss, wkhtmltopdf, wkhtmltopdf-bin
 }:
 let
@@ -11,32 +11,35 @@ let
   ifLinux = ps: if isLinux then ps else [];
   is-x86_64 = lib.strings.hasPrefix "x86_64" system;
 
-  # Crea l'ambiente Python leggendo direttamente da requirements.txt
-  pythonEnv = python3.withPackages (ps: 
-    let
-      # Legge il requirements.txt
-      requirements = builtins.readFile ./requirements.txt;
-      # Split in linee e rimuovi commenti
-      lines = lib.filter (l: l != "" && ! lib.hasPrefix "#" l) 
-        (lib.splitString "\n" requirements);
-      # Funzione per estrarre il nome del pacchetto
-      getName = requirement:
-        let
-          # Rimuovi eventuali vincoli di versione e condizioni
-          base = lib.head (lib.splitString ";" requirement);
-          name = lib.head (lib.splitString "==" base);
-          nameCleaned = lib.head (lib.splitString ">=" name);
-        in lib.toLower (lib.removeSuffix " " (lib.removePrefix " " nameCleaned));
-      # Converti nomi pacchetti in riferimenti a pythonPackages
-      getPackage = name:
-        let 
-          attr = if builtins.hasAttr name ps 
-                 then name 
-                 else throw "Python package ${name} not found";
-        in ps.${attr};
-    in
-      map (name: getPackage name) (map getName lines)
-  );
+  pythonPackages = python3.pkgs;
+
+  # Crea un ambiente virtuale con le dipendenze da pip
+  pythonEnv = pythonPackages.buildPythonPackage {
+    pname = "odoo16-deps";
+    version = "1.0";
+    format = "setuptools";
+
+    src = ./.;  # Usa la directory corrente
+
+    # Non eseguire i test delle dipendenze
+    doCheck = false;
+
+    # Specifica le dipendenze da pip
+    propagatedBuildInputs = with pythonPackages; [
+      pip
+    ];
+
+    # Installa le dipendenze da requirements.txt durante la fase di build
+    buildInputs = [ pythonPackages.pip ];
+
+    # Copia requirements.txt e installa le dipendenze
+    postInstall = ''
+      cp ${./requirements.txt} $out/requirements.txt
+      export HOME=$TMPDIR
+      cd $out
+      ${pythonPackages.pip}/bin/pip install -r requirements.txt --prefix=$out
+    '';
+  };
 
   wkhtmltopdf-odoo =
     if is-x86_64
@@ -62,6 +65,7 @@ in stdenv.mkDerivation rec {
 
   buildInputs = [
     rtlcss
+    pythonEnv
   ] ++ ifLinux [ wkhtmltopdf-odoo ];
 
   installPhase = ''
@@ -70,8 +74,8 @@ in stdenv.mkDerivation rec {
     
     cat > $out/bin/odoo <<EOF
     #!${stdenv.shell}
-    PYTHONPATH=$out/share/odoo:$PYTHONPATH
-    exec ${pythonEnv}/bin/python $out/share/odoo/odoo-bin "\$@"
+    PYTHONPATH=$out/share/odoo:${pythonEnv}/${python3.sitePackages}:$PYTHONPATH
+    exec ${python3}/bin/python $out/share/odoo/odoo-bin "\$@"
     EOF
     chmod +x $out/bin/odoo
   '';
